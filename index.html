@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<body>
+
+    <div ng-app="CalculatorApp" ng-controller="CalculatorController">
+    <div class="container">
+    <div class="jumbotron">
+            <div class="page-header">
+                    <h2>Calculator: <small>Do not divide by zero, you will reach an infinite universe!</small></h2>
+            </div>
+    <div class="row mt-1"> 
+    <div class="col-sm-6">
+    <div class="row mt-1">
+    <div class="col-sm-8">
+            <input class="form-control" type="text" value="{{ value }}" placeholder="Type Something..." readonly>
+    </div>
+    </div>
+    <div class="row mt-1">
+    <div class="col-sm-2">
+    <button name="btn1" class="btn btn-primary" value="1" ng-click='updateOutput(1)'>1</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btn2" class="btn btn-primary" value="2" ng-click='updateOutput(2)'>2</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btn3" class="btn btn-primary" value="3" ng-click='updateOutput(3)'>3</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btnplus" class="btn btn-primary" value="add" ng-click='updateOperation("add")'>+</button>
+    </div>
+    </div>
+    <div class="row mt-1">
+    <div class="col-sm-2">
+    <button name="btn4" class="btn btn-primary" value="4" ng-click='updateOutput(4)'>4</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btn5" class="btn btn-primary" value="5" ng-click='updateOutput(5)'>5</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btn6" class="btn btn-primary" value="6" ng-click='updateOutput(6)'>6</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btnssub" class="btn btn-primary" value="sub" ng-click='updateOperation("sub")'>-</button>
+    </div>
+    </div>
+    <div class="row mt-1">
+    <div class="col-sm-2">
+    <button name="btn1" class="btn btn-primary" value="1" ng-click='updateOutput(7)'>7</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btn2" class="btn btn-primary" value="2" ng-click='updateOutput(8)'>8</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btn3" class="btn btn-primary" value="3" ng-click='updateOutput(9)'>9</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btnssub" class="btn btn-primary" value="div" ng-click='updateOperation("div")'>/</button>
+    </div>
+    </div>
+    <div class="row mt-1">
+    <div class="col-sm-2">
+    <button name="btnmul" class="btn btn-primary" value="mul" ng-click='updateOperation("mul")'>*</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btneq" class="btn btn-primary" value="eq" ng-click='updateOperation("eq")'>=</button>
+    </div> 
+    <div class="col-sm-2">
+    <button name="btn0" class="btn btn-primary" value="3" ng-click='updateOutput(0)'>0</button>
+    </div>
+    <div class="col-sm-2">
+    <button name="btnclc" class="btn btn-primary" value="clc" ng-click='deleteAll()'>C All</button>
+    </div>  
+    </div>
+    </div>
+    <div class="col-sm-6">
+        <h1>{{ value }}</h1>
+    </div>
+    </div>
+       </div>
+       </div>
+       </div>
+<script src="js/calculator.js"></script>
+</body>
+</html>
